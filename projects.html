@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sample projects developed by Simeon Obatu.">
+  <title>Projects | Simeon Obatu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Simeon<span>.dev</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="planner.html">Academic Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <span class="page-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="16 18 22 12 16 6"/>
+          <polyline points="8 6 2 12 8 18"/>
+        </svg>
+        Work &amp; Portfolio
+      </span>
+      <h1>Featured Projects</h1>
+      <p>Explore practical web applications created during my postgraduate coursework and independent study.</p>
+    </section>
+
+    <div class="projects-container">
+      <section class="projects-grid">
+        <article class="project-card fade-in">
+          <div class="project-img-wrapper">
+            <img src="images/project1.svg" alt="Screenshot of the Personal Budget Tracker project" width="600" height="400">
+          </div>
+          <div class="project-body">
+            <h3>Personal Budget Tracker</h3>
+            <p>
+              A financial utility designed for students to track everyday allowances, record expenses,
+              and monitor semester savings goals with instant calculations.
+            </p>
+            <ul class="project-tags">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>Calculations</li>
+            </ul>
+            <a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-primary btn-small">View on GitHub &rarr;</a>
+          </div>
+        </article>
+
+        <article class="project-card fade-in">
+          <div class="project-img-wrapper">
+            <img src="images/project2.svg" alt="Screenshot of the Campus News Portal project" width="600" height="400">
+          </div>
+          <div class="project-body">
+            <h3>Campus News Portal</h3>
+            <p>
+              A responsive university bulletin featuring academic headlines, departmental events,
+              and a curated media gallery built using flexible CSS Grid layouts.
+            </p>
+            <ul class="project-tags">
+              <li>HTML5</li>
+              <li>CSS Grid</li>
+              <li>Flexbox</li>
+              <li>Responsive UI</li>
+            </ul>
+            <a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-primary btn-small">View on GitHub &rarr;</a>
+          </div>
+        </article>
+
+        <article class="project-card fade-in">
+          <div class="project-img-wrapper">
+            <img src="images/project3.svg" alt="Screenshot of the To-Do List App project" width="600" height="400">
+          </div>
+          <div class="project-body">
+            <h3>Academic To-Do List App</h3>
+            <p>
+              An interactive student task manager with full CRUD capabilities, state persistence via
+              browser localStorage, and instant DOM updates for smooth daily planning.
+            </p>
+            <ul class="project-tags">
+              <li>JavaScript</li>
+              <li>DOM API</li>
+              <li>localStorage</li>
+              <li>Interactive</li>
+            </ul>
+            <a href="planner.html" class="btn btn-primary btn-small">Launch Live Planner &rarr;</a>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Simeon Obatu &bull; COS 106 Term Project &bull; MIVA Open University</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive academic planner for tracking study tasks.">
+  <title>Academic Planner | Simeon Obatu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Simeon<span>.dev</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html" class="active">Academic Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <span class="page-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+        </svg>
+        Interactive Tool
+      </span>
+      <h1>Academic Planner</h1>
+      <p>Organize your study goals, track completed coursework, and manage deadlines with automatic browser saving.</p>
+    </section>
+
+    <div class="planner-wrapper">
+      <section class="planner-card fade-in">
+        <div class="planner-card-header">
+          <h2>My Study Tasks</h2>
+          <span class="badge-count" id="taskCount">0 tasks</span>
+        </div>
+
+        <form class="planner-form" id="taskForm">
+          <input type="text" id="taskInput" placeholder="e.g. Complete COS 106 assignment..." autocomplete="off">
+          <button type="submit" class="btn btn-primary">+ Add Task</button>
+        </form>
+        <p class="error-msg" id="taskError"></p>
+
+        <div class="planner-actions">
+          <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Task Checklist</span>
+          <button class="btn btn-small btn-outline" id="clearCompleted">Clear Completed</button>
+        </div>
+
+        <ul class="task-list" id="taskList"></ul>
+        <p class="empty-msg" id="emptyMessage">No tasks recorded yet. Add your first study goal above.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Simeon Obatu &bull; COS 106 Term Project &bull; MIVA Open University</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

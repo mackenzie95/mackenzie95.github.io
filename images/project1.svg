@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bgP1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <filter id="shadowP1" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="600" height="400" fill="url(#bgP1)" />
+
+  <!-- Grid Glow / Mesh Effect -->
+  <circle cx="500" cy="80" r="140" fill="#4f46e5" opacity="0.25" filter="blur(40px)" />
+  <circle cx="100" cy="320" r="120" fill="#06b6d4" opacity="0.2" filter="blur(40px)" />
+
+  <!-- Browser Window Wrapper -->
+  <g transform="translate(40, 35)" filter="url(#shadowP1)">
+    <!-- Window Frame -->
+    <rect width="520" height="330" rx="14" fill="#ffffff" />
+    
+    <!-- Window Header -->
+    <path d="M 0,14 Q 0,0 14,0 L 506,0 Q 520,0 520,14 L 520,44 L 0,44 Z" fill="#f8fafc" />
+    <line x1="0" y1="44" x2="520" y2="44" stroke="#e2e8f0" stroke-width="1" />
+    
+    <!-- Window Dots -->
+    <circle cx="24" cy="22" r="6" fill="#ef4444" />
+    <circle cx="44" cy="22" r="6" fill="#f59e0b" />
+    <circle cx="64" cy="22" r="6" fill="#10b981" />
+    
+    <!-- Browser URL Bar -->
+    <rect x="96" y="11" width="320" height="22" rx="6" fill="#e2e8f0" opacity="0.7" />
+    <text x="110" y="26" font-family="-apple-system, sans-serif" font-size="10" fill="#64748b">budget-tracker.simeon.dev</text>
+
+    <!-- App Content Layout -->
+    <!-- Top Stat Card -->
+    <g transform="translate(30, 65)">
+      <rect width="220" height="110" rx="12" fill="url(#cardGrad)" />
+      <text x="20" y="32" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#c7d2fe">TOTAL BALANCE</text>
+      <text x="20" y="68" font-family="-apple-system, sans-serif" font-size="26" font-weight="800" fill="#ffffff">&#8358;145,200</text>
+      <text x="20" y="94" font-family="-apple-system, sans-serif" font-size="10" font-weight="500" fill="#a5b4fc">&#8593; 14% saved this semester</text>
+    </g>
+
+    <!-- Spending Target Card -->
+    <g transform="translate(270, 65)">
+      <rect width="220" height="110" rx="12" fill="#f8fafc" stroke="#e2e8f0" />
+      <text x="18" y="32" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#475569">MONTHLY LIMIT</text>
+      <text x="18" y="68" font-family="-apple-system, sans-serif" font-size="24" font-weight="800" fill="#0f172a">&#8358;80,000</text>
+      <!-- Progress Bar -->
+      <rect x="18" y="86" width="184" height="8" rx="4" fill="#e2e8f0" />
+      <rect x="18" y="86" width="120" height="8" rx="4" fill="#10b981" />
+    </g>
+
+    <!-- Recent Expenses List -->
+    <g transform="translate(30, 195)">
+      <text x="0" y="14" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Recent Expenses</text>
+      
+      <!-- Item 1 -->
+      <g transform="translate(0, 26)">
+        <rect width="460" height="42" rx="8" fill="#f8fafc" />
+        <circle cx="24" cy="21" r="12" fill="#e0e7ff" />
+        <text x="18" y="25" font-family="-apple-system, sans-serif" font-size="12" fill="#4f46e5">&#128218;</text>
+        <text x="48" y="20" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Web Tech Textbooks</text>
+        <text x="48" y="33" font-family="-apple-system, sans-serif" font-size="9" fill="#94a3b8">Academic Books</text>
+        <text x="440" y="26" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#ef4444" text-anchor="end">-&#8358;12,000</text>
+      </g>
+
+      <!-- Item 2 -->
+      <g transform="translate(0, 76)">
+        <rect width="460" height="42" rx="8" fill="#f8fafc" />
+        <circle cx="24" cy="21" r="12" fill="#dcfce7" />
+        <text x="18" y="25" font-family="-apple-system, sans-serif" font-size="12" fill="#15803d">&#128246;</text>
+        <text x="48" y="20" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Campus WiFi &amp; Data</text>
+        <text x="48" y="33" font-family="-apple-system, sans-serif" font-size="9" fill="#94a3b8">Utilities</text>
+        <text x="440" y="26" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#ef4444" text-anchor="end">-&#8358;5,500</text>
+      </g>
+    </g>
+  </g>
+</svg>

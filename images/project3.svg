@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bgP3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#064e3b" />
+    </linearGradient>
+    <linearGradient id="tagGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <filter id="shadowP3" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="600" height="400" fill="url(#bgP3)" />
+
+  <!-- Ambient Glow -->
+  <circle cx="160" cy="120" r="140" fill="#10b981" opacity="0.2" filter="blur(40px)" />
+  <circle cx="460" cy="280" r="130" fill="#059669" opacity="0.25" filter="blur(40px)" />
+
+  <!-- Browser Window Wrapper -->
+  <g transform="translate(40, 35)" filter="url(#shadowP3)">
+    <!-- Window Frame -->
+    <rect width="520" height="330" rx="14" fill="#ffffff" />
+    
+    <!-- Window Header -->
+    <path d="M 0,14 Q 0,0 14,0 L 506,0 Q 520,0 520,14 L 520,44 L 0,44 Z" fill="#f8fafc" />
+    <line x1="0" y1="44" x2="520" y2="44" stroke="#e2e8f0" stroke-width="1" />
+    
+    <!-- Window Dots -->
+    <circle cx="24" cy="22" r="6" fill="#ef4444" />
+    <circle cx="44" cy="22" r="6" fill="#f59e0b" />
+    <circle cx="64" cy="22" r="6" fill="#10b981" />
+    
+    <!-- Browser URL Bar -->
+    <rect x="96" y="11" width="320" height="22" rx="6" fill="#e2e8f0" opacity="0.7" />
+    <text x="110" y="26" font-family="-apple-system, sans-serif" font-size="10" fill="#64748b">todo-app.simeon.dev</text>
+
+    <!-- App Content Layout -->
+    <!-- App Header & Counter -->
+    <g transform="translate(28, 62)">
+      <text x="0" y="18" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#0f172a">Academic Study Tracker</text>
+      
+      <rect x="360" y="2" width="104" height="22" rx="11" fill="#ecfdf5" stroke="#a7f3d0" />
+      <circle cx="372" cy="13" r="4" fill="#10b981" />
+      <text x="382" y="17" font-family="-apple-system, sans-serif" font-size="9" font-weight="700" fill="#047857">4 TASKS ACTIVE</text>
+    </g>
+
+    <!-- Task Input Bar Simulation -->
+    <g transform="translate(28, 98)">
+      <rect width="360" height="38" rx="8" fill="#f8fafc" stroke="#cbd5e1" />
+      <text x="14" y="24" font-family="-apple-system, sans-serif" font-size="12" fill="#94a3b8">Add a new study goal...</text>
+      <rect x="372" y="0" width="92" height="38" rx="8" fill="url(#tagGrad)" />
+      <text x="418" y="24" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">+ Add Task</text>
+    </g>
+
+    <!-- Task List -->
+    <g transform="translate(28, 150)">
+      <!-- Task 1: Completed -->
+      <g transform="translate(0, 0)">
+        <rect width="464" height="44" rx="8" fill="#f8fafc" stroke="#e2e8f0" />
+        <!-- Checkbox Checked -->
+        <rect x="14" y="12" width="20" height="20" rx="6" fill="#10b981" />
+        <path d="M 19,22 L 23,26 L 30,17" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        <!-- Task Text (line-through) -->
+        <text x="46" y="27" font-family="-apple-system, sans-serif" font-size="12" fill="#94a3b8" text-decoration="line-through">Study COS 106 HTML5 Semantic Elements</text>
+        <rect x="386" y="12" width="64" height="20" rx="4" fill="#e2e8f0" />
+        <text x="418" y="26" font-family="-apple-system, sans-serif" font-size="9" font-weight="600" fill="#64748b" text-anchor="middle">DONE</text>
+      </g>
+
+      <!-- Task 2: Active -->
+      <g transform="translate(0, 52)">
+        <rect width="464" height="44" rx="8" fill="#ffffff" stroke="#cbd5e1" />
+        <!-- Checkbox Unchecked -->
+        <rect x="14" y="12" width="20" height="20" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" />
+        <text x="46" y="27" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Build Responsive CSS Grid for Project 2</text>
+        <rect x="374" y="12" width="76" height="20" rx="4" fill="#e0e7ff" />
+        <text x="412" y="26" font-family="-apple-system, sans-serif" font-size="9" font-weight="700" fill="#4338ca" text-anchor="middle">PRIORITY</text>
+      </g>
+
+      <!-- Task 3: Active -->
+      <g transform="translate(0, 104)">
+        <rect width="464" height="44" rx="8" fill="#ffffff" stroke="#cbd5e1" />
+        <!-- Checkbox Unchecked -->
+        <rect x="14" y="12" width="20" height="20" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" />
+        <text x="46" y="27" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Implement localStorage Persistence in JS</text>
+        <rect x="386" y="12" width="64" height="20" rx="4" fill="#fef3c7" />
+        <text x="418" y="26" font-family="-apple-system, sans-serif" font-size="9" font-weight="700" fill="#b45309" text-anchor="middle">TODAY</text>
+      </g>
+    </g>
+  </g>
+</svg>

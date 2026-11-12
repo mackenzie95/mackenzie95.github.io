@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bgP2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#311042" />
+    </linearGradient>
+    <linearGradient id="newsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9333ea" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <filter id="shadowP2" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="600" height="400" fill="url(#bgP2)" />
+
+  <!-- Ambient Glow -->
+  <circle cx="150" cy="80" r="130" fill="#9333ea" opacity="0.25" filter="blur(40px)" />
+  <circle cx="480" cy="320" r="130" fill="#ec4899" opacity="0.2" filter="blur(40px)" />
+
+  <!-- Browser Window Wrapper -->
+  <g transform="translate(40, 35)" filter="url(#shadowP2)">
+    <!-- Window Frame -->
+    <rect width="520" height="330" rx="14" fill="#ffffff" />
+    
+    <!-- Window Header -->
+    <path d="M 0,14 Q 0,0 14,0 L 506,0 Q 520,0 520,14 L 520,44 L 0,44 Z" fill="#f8fafc" />
+    <line x1="0" y1="44" x2="520" y2="44" stroke="#e2e8f0" stroke-width="1" />
+    
+    <!-- Window Dots -->
+    <circle cx="24" cy="22" r="6" fill="#ef4444" />
+    <circle cx="44" cy="22" r="6" fill="#f59e0b" />
+    <circle cx="64" cy="22" r="6" fill="#10b981" />
+    
+    <!-- Browser URL Bar -->
+    <rect x="96" y="11" width="320" height="22" rx="6" fill="#e2e8f0" opacity="0.7" />
+    <text x="110" y="26" font-family="-apple-system, sans-serif" font-size="10" fill="#64748b">miva-news.simeon.dev</text>
+
+    <!-- App Content Layout -->
+    <!-- Nav strip inside website -->
+    <g transform="translate(24, 58)">
+      <text x="0" y="16" font-family="-apple-system, sans-serif" font-size="14" font-weight="800" fill="#0f172a">MIVA <tspan fill="#9333ea">HERALD</tspan></text>
+      <rect x="370" y="4" width="94" height="20" rx="10" fill="#f3e8ff" />
+      <text x="417" y="18" font-family="-apple-system, sans-serif" font-size="9" font-weight="700" fill="#9333ea" text-anchor="middle">&#127891; CAMPUS LIVE</text>
+    </g>
+
+    <!-- Hero Article Card -->
+    <g transform="translate(24, 88)">
+      <rect width="280" height="150" rx="10" fill="url(#newsGrad)" />
+      <!-- Overlay text -->
+      <rect x="14" y="16" width="70" height="18" rx="9" fill="rgba(255,255,255,0.25)" />
+      <text x="49" y="29" font-family="-apple-system, sans-serif" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">ACADEMICS</text>
+      
+      <text x="14" y="66" font-family="-apple-system, sans-serif" font-size="15" font-weight="800" fill="#ffffff">COS 106 Web Hackathon</text>
+      <text x="14" y="86" font-family="-apple-system, sans-serif" font-size="15" font-weight="800" fill="#ffffff">Kicks Off This Semester</text>
+      
+      <text x="14" y="112" font-family="-apple-system, sans-serif" font-size="10" fill="#fce7f3">Students showcase modern responsive designs...</text>
+      
+      <rect x="14" y="124" width="80" height="16" rx="4" fill="#ffffff" />
+      <text x="54" y="136" font-family="-apple-system, sans-serif" font-size="9" font-weight="700" fill="#9333ea" text-anchor="middle">Read Story &#8594;</text>
+    </g>
+
+    <!-- Side Headlines -->
+    <g transform="translate(320, 88)">
+      <!-- Item 1 -->
+      <rect width="176" height="68" rx="8" fill="#f8fafc" stroke="#e2e8f0" />
+      <rect x="10" y="10" width="45" height="14" rx="4" fill="#e0e7ff" />
+      <text x="32" y="20" font-family="-apple-system, sans-serif" font-size="8" font-weight="700" fill="#4338ca" text-anchor="middle">TECH</text>
+      <text x="10" y="40" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#0f172a">Open University Portal</text>
+      <text x="10" y="54" font-family="-apple-system, sans-serif" font-size="9" fill="#64748b">New features rolled out...</text>
+
+      <!-- Item 2 -->
+      <g transform="translate(0, 78)">
+        <rect width="176" height="68" rx="8" fill="#f8fafc" stroke="#e2e8f0" />
+        <rect x="10" y="10" width="45" height="14" rx="4" fill="#fef3c7" />
+        <text x="32" y="20" font-family="-apple-system, sans-serif" font-size="8" font-weight="700" fill="#b45309" text-anchor="middle">EVENT</text>
+        <text x="10" y="40" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#0f172a">Virtual Orientation Day</text>
+        <text x="10" y="54" font-family="-apple-system, sans-serif" font-size="9" fill="#64748b">Schedule and Zoom links...</text>
+      </g>
+    </g>
+
+    <!-- Bottom Category Strip -->
+    <g transform="translate(24, 256)">
+      <rect width="144" height="50" rx="8" fill="#f8fafc" stroke="#e2e8f0" />
+      <text x="12" y="22" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#0f172a">&#127912; Campus Gallery</text>
+      <text x="12" y="38" font-family="-apple-system, sans-serif" font-size="9" fill="#64748b">240 Photos added</text>
+
+      <rect x="160" y="0" width="144" height="50" rx="8" fill="#f8fafc" stroke="#e2e8f0" />
+      <text x="172" y="22" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#0f172a">&#128227; Announcements</text>
+      <text x="172" y="38" font-family="-apple-system, sans-serif" font-size="9" fill="#64748b">Exam timetables</text>
+
+      <rect x="320" y="0" width="176" height="50" rx="8" fill="#f8fafc" stroke="#e2e8f0" />
+      <text x="332" y="22" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#0f172a">&#9917; Sports &amp; Clubs</text>
+      <text x="332" y="38" font-family="-apple-system, sans-serif" font-size="9" fill="#64748b">Join university team</text>
+    </g>
+  </g>
+</svg>
