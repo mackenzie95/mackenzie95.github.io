@@ -12,7 +12,11 @@
   <header class="site-header">
     <nav class="navbar">
       <a href="index.html" class="logo">Simeon<span>.dev</span></a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html" class="active">About Me</a></li>
@@ -21,6 +25,7 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
   </header>
 
   <main>
@@ -68,7 +73,7 @@
                 <tr>
                   <td>2025 &ndash; Present</td>
                   <td>MIVA Open University</td>
-                  <td>M.Sc. Software Engineering <span class="badge-status">In view</span></td>
+                  <td>B.Sc. Software Engineering <span class="badge-status">In view</span></td>
                 </tr>
                 <tr>
                   <td>2023</td>

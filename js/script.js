@@ -1,26 +1,62 @@
+// ==========================================================================
+// Mobile Navigation Drawer with Overlay & Animated Hamburger
+// ==========================================================================
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
+const navOverlay = document.getElementById("navOverlay");
+
+function openMenu() {
+  if (!menuToggle || !navLinks) return;
+  menuToggle.classList.add("active");
+  menuToggle.setAttribute("aria-expanded", "true");
+  navLinks.classList.add("open");
+  if (navOverlay) navOverlay.classList.add("open");
+  document.body.classList.add("menu-locked");
+}
+
+function closeMenu() {
+  if (!menuToggle || !navLinks) return;
+  menuToggle.classList.remove("active");
+  menuToggle.setAttribute("aria-expanded", "false");
+  navLinks.classList.remove("open");
+  if (navOverlay) navOverlay.classList.remove("open");
+  document.body.classList.remove("menu-locked");
+}
+
+function toggleMenu(e) {
+  if (e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+  if (navLinks.classList.contains("open")) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+}
 
 if (menuToggle && navLinks) {
-  menuToggle.addEventListener("click", function (e) {
-    e.stopPropagation();
-    const isOpen = navLinks.classList.toggle("open");
-    menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-  });
+  menuToggle.addEventListener("click", toggleMenu);
+
+  if (navOverlay) {
+    navOverlay.addEventListener("click", closeMenu);
+  }
 
   document.addEventListener("click", function (e) {
-    if (!navLinks.contains(e.target) && e.target !== menuToggle) {
-      navLinks.classList.remove("open");
-      menuToggle.setAttribute("aria-expanded", "false");
+    if (navLinks.classList.contains("open") && !navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && navLinks.classList.contains("open")) {
+      closeMenu();
     }
   });
 
   const links = navLinks.querySelectorAll("a");
   links.forEach(function (link) {
-    link.addEventListener("click", function () {
-      navLinks.classList.remove("open");
-      menuToggle.setAttribute("aria-expanded", "false");
-    });
+    link.addEventListener("click", closeMenu);
   });
 }
 
